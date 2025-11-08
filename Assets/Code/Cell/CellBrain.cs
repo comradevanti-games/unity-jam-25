@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -6,12 +7,19 @@ public class CellBrain : MonoBehaviour
 {
     private CellChildren children = null!;
 
-    public void ApplyMovement(Vector3 direction)
-    {
-        var motors = children.Parts.Select(part => part.GameObject)
+
+    private IEnumerable<IMotor> Motors =>
+        children.Parts.Select(part => part.GameObject)
             .SelectNotNull(g => g.GetComponent<IMotor>());
 
-        foreach (var motor in motors) motor.MoveIn(direction);
+    public void ApplyMovement(Vector3 direction)
+    {
+        foreach (var motor in Motors) motor.MoveIn(direction);
+    }
+
+    public void ApplyTurn(float direction)
+    {
+        foreach (var motor in Motors) motor.TurnIn(direction);
     }
 
     private void Awake()

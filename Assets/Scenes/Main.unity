@@ -443,6 +443,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 66102d65-933c-49d1-8e08-d8d5985cddd4
     m_ActionName: UI/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 346490861}
+        m_TargetAssemblyTypeName: InputHandler, Main
+        m_MethodName: OnTurnInputReceived
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cc6026ca-9722-4626-943b-b47794b38c42
+    m_ActionName: 'Game/Turn[/Keyboard/q,/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: MK
   m_DefaultActionMap: Game

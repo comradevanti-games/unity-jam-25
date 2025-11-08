@@ -3,6 +3,7 @@ using UnityEngine;
 public class ForwardMovementMotor : MonoBehaviour, IMotor
 {
     [SerializeField] private float maxMovementForce;
+    [SerializeField] private float turnForce;
 
     private new Rigidbody rigidbody = null!;
 
@@ -13,6 +14,12 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
 
         var force = maxMovementForce * scale;
         rigidbody.AddForce(direction * force, ForceMode.Force);
+    }
+
+    public void TurnIn(float direction)
+    {
+        rigidbody.AddTorque(Vector3.up * direction * turnForce,
+            ForceMode.Force);
     }
 
     private void Awake()
