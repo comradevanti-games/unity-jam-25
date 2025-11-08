@@ -44,7 +44,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3379663357691933048}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 0.2
   m_LinearDamping: 0.5
   m_AngularDamping: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -91,7 +91,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7933f3db730e4f04868990fab09a72d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::CellPart
+  dockChanged:
+    m_PersistentCalls:
+      m_Calls: []
   isDock: 0
+  energyContent: 0
 --- !u!114 &7773828103487594645
 MonoBehaviour:
   m_ObjectHideFlags: 0
