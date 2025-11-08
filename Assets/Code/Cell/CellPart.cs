@@ -9,7 +9,7 @@ public class CellPart : MonoBehaviour
 
     [SerializeField] private bool isDock;
 
-    private CellDockingManager cellDockingManager;
+    private CellDockingManager cellDockingManager = null!;
     private FixedJoint? dockJoint;
     private new Rigidbody rigidbody = null!;
     private CellPart? dock;
