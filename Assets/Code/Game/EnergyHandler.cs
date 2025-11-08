@@ -59,8 +59,9 @@ public class EnergyHandler : MonoBehaviour {
 
     }
 
-    public void OnEnergyBurned(float burnedEnergy) {
-        StoredWorldEnergy += burnedEnergy;
+    public void ReturnEnergy(float amount)
+    {
+        StoredWorldEnergy += amount;
 
         if (CurrentWorldEnergy >= maxEnergyAmount) return;
 

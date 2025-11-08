@@ -23,7 +23,7 @@ public class CellEnergyStore : MonoBehaviour
     {
         amount = Mathf.Min(Energy, amount);
         Energy -= amount;
-        energyHandler.OnEnergyBurned(amount);
+        energyHandler.ReturnEnergy(amount);
 
         if (Energy == 0) Die();
     }

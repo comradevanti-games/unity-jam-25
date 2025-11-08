@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,12 +9,18 @@ public class CellPart : MonoBehaviour
     public UnityEvent<CellPart?> dockChanged = new UnityEvent<CellPart?>();
 
     [SerializeField] private bool isDock;
+    [SerializeField] private float energyContent;
 
     private CellDockingManager cellDockingManager = null!;
     private FixedJoint? dockJoint;
     private new Rigidbody rigidbody = null!;
     private CellPart? dock;
     private readonly ISet<CellPart> docked = new HashSet<CellPart>();
+
+    /// <summary>
+    /// How much energy is stored in this part
+    /// </summary>
+    public float EnergyContent => energyContent;
 
     /// <summary>
     /// Whether this part can dock onto other parts
@@ -77,5 +84,10 @@ public class CellPart : MonoBehaviour
 
         var incident = new DockingIncident(selfCell, this, otherPart);
         cellDockingManager.ReportDockingIncident(incident);
+    }
+
+    private void OnDestroy()
+    {
+        FindAnyObjectByType<EnergyHandler>().ReturnEnergy(energyContent);
     }
 }
