@@ -11,9 +11,10 @@ public class RelativeDirectionalInput : MonoBehaviour
     private void OnAbsoluteInput(Vector2 input)
     {
         var absolute = new Vector3(input.x, 0, input.y);
-        var relative = relativeTarget ? relativeTarget.InverseTransformDirection(absolute) : absolute;
+        var relative = relativeTarget
+            ? relativeTarget.InverseTransformDirection(absolute)
+            : absolute;
         inputReceived.Invoke(relative);
-        Debug.Log(relative);
     }
 
     private void OnDisable()
