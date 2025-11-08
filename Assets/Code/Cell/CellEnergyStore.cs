@@ -19,7 +19,13 @@ public class CellEnergyStore : MonoBehaviour {
         died?.Invoke(cell);
     }
 
-    public void Burn(float amount) {
+    public void Gain(float amount)
+    {
+        Energy += amount;
+    }
+
+    public void Burn(float amount)
+    {
         amount = Mathf.Min(Energy, amount);
         Energy -= amount;
         energyHandler.ReturnEnergy(amount);

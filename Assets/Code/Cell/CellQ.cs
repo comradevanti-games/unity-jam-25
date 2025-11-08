@@ -7,7 +7,7 @@ public static class CellQ
 {
     public static bool IsPlayerCell(Cell cell) =>
         cell.Root.CompareTag("Player");
-
+    
     public static IEnumerable<CellPart> IterDockedPartsRecursive(CellPart part)
     {
         yield return part;
@@ -46,6 +46,13 @@ public static class CellQ
         if (part is null) return null;
         return CellOf(part);
     }
+
+    public static T? GetRootComponent<T>(CellPart part) where T : Component
+    {
+        var cell = CellOf(part);
+        return cell?.Root.GetComponent<T>();
+    }
+    
 
     public static bool IsSameCell(Cell a, Cell b) => a.Root == b.Root;
 }
