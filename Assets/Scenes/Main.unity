@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 205352719}
   - component: {fileID: 205352720}
+  - component: {fileID: 205352721}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -163,6 +164,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79cc007b712d82747bd7e9ae227fa44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::GameHandler
+--- !u!114 &205352721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205352718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e94ec1bfd33ed41a27b2ff6b5d7ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Main::NutrientHandler
+  maxAmount: 25
+  smallNutrientPrefab: {fileID: 6914094712483467761, guid: a67e15b9fbdad1c4989ad4ddb868a864, type: 3}
 --- !u!1001 &272657180
 PrefabInstance:
   m_ObjectHideFlags: 0
