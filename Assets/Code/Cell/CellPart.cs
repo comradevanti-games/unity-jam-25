@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CellPart : MonoBehaviour
 {
+    public UnityEvent<CellPart?> dockChanged = new UnityEvent<CellPart?>();
+
     [SerializeField] private bool isDock;
 
     private CellDockingManager cellDockingManager;
@@ -38,6 +41,8 @@ public class CellPart : MonoBehaviour
 
             if (dock != null)
                 dock.docked.Add(this);
+
+            dockChanged.Invoke(value);
         }
     }
 
