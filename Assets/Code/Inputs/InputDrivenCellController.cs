@@ -4,19 +4,25 @@ public class InputDrivenCellController : MonoBehaviour
 {
     private CellBrain brain = null!;
 
-    private Vector3 moveDirection = Vector3.zero;
+    private Vector2 moveInput = Vector2.zero;
     private float turnDirection;
 
     private void FixedUpdate()
     {
-        if (moveDirection != Vector3.zero) brain.ApplyMovement(moveDirection);
+        if (moveInput != Vector2.zero)
+        {
+            var local = new Vector3(moveInput.x, 0, moveInput.y);
+            var moveDirection = transform.TransformDirection(local);
+            brain.ApplyMovement(moveDirection);
+        }
+
         if (turnDirection != 0f) brain.ApplyTurn(turnDirection);
     }
 
     private void OnMovementInput(Vector2 direction)
     {
-        var absolute = new Vector3(direction.x, 0, direction.y);
-        moveDirection = transform.InverseTransformDirection(absolute);
+        moveInput = direction;
+       
     }
 
     private void OnTurnInput(float direction)
