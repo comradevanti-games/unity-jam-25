@@ -629,11 +629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044daac9f677be64eb919ca07602511d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::World
-  AreaPoints:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
 --- !u!1001 &713918285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -869,6 +864,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4605381699023684343, guid: 05c4a75e2861fea2a8a252f527288971, type: 3}
   m_PrefabInstance: {fileID: 8323977437177302131}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1817599084 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2120993414804841715, guid: 8e0fa5fb1f1201a60a1683106454373f, type: 3}
+  m_PrefabInstance: {fileID: 1192704854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2075388252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -984,9 +984,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9080785289584097933, guid: 05c4a75e2861fea2a8a252f527288971, type: 3}
+      propertyPath: zDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080785289584097933, guid: 05c4a75e2861fea2a8a252f527288971, type: 3}
       propertyPath: defaultTarget
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1817599084}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
