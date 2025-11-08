@@ -39,7 +39,7 @@ public class CellHandler : MonoBehaviour {
         if (c == null) return null;
 
         foreach (Transform t in cellPrefab.transform) {
-            t.SetParent(null);
+            t.SetParent(null, true);
         }
 
         Destroy(cellPrefab);
