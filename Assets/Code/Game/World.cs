@@ -10,10 +10,8 @@ public class World : MonoBehaviour {
 
     private void Awake() {
 
-        var areaPointsTransforms = GetComponentsInChildren<Transform>();
-
-        foreach (Transform? point in areaPointsTransforms) {
-            areaPoints.Add(new Vector2(point.position.x, point.position.z));
+        foreach (Transform child in transform) {
+            areaPoints.Add(new Vector2(child.position.x, child.position.z));
         }
 
         if (areaPoints.Count < 3) {
