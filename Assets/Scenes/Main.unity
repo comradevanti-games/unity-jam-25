@@ -233,8 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886e19576cd3aa340bbedddd503355c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::EnergyHandler
-  totalEnergyAmount: 1000
-  cellPartPercentage: 0.2
+  totalEnergyAmount: 200
+  initialCellParts: 5
+  cellPartAppearChance: 0.2
   storedEnergyReleaseThreshold: 10
 --- !u!1001 &215021767
 PrefabInstance:

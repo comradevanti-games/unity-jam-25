@@ -5,7 +5,8 @@ using Random = UnityEngine.Random;
 public class EnergyHandler : MonoBehaviour {
 
     [SerializeField] private float totalEnergyAmount = 1000f;
-    [SerializeField] private float cellPartPercentage = 0.2f;
+    [SerializeField] private int initialCellParts = 5;
+    [SerializeField] private float cellPartAppearChance = 0.2f;
     [SerializeField] private float storedEnergyReleaseThreshold = 10f;
 
     private CellPartHandler cellPartHandler = null;
@@ -19,8 +20,8 @@ public class EnergyHandler : MonoBehaviour {
     }
 
     public void InitializeWorldEnergy() {
-        nutrientHandler.SpawnNutrient(100);
-        cellPartHandler.SpawnCellPart(5);
+        nutrientHandler.SpawnNutrient((int)(totalEnergyAmount / 2f));
+        cellPartHandler.SpawnCellPart(8);
     }
 
     public void UseWorldEnergy(float usedEnergy) {
@@ -44,7 +45,7 @@ public class EnergyHandler : MonoBehaviour {
 
         float percentage = Random.Range(0f, 1f);
 
-        if (percentage < cellPartPercentage) {
+        if (percentage < cellPartAppearChance) {
             cellPartHandler.SpawnCellPart(1);
         }
         else {
