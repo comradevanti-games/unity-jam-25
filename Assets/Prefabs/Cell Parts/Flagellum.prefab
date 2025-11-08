@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4310258117408554722}
   - component: {fileID: 3076107327925258986}
   - component: {fileID: 7987920993227310333}
-  - component: {fileID: -5010954986884404564}
-  - component: {fileID: -1861861584003731643}
+  - component: {fileID: 6465528565774065239}
   - component: {fileID: 7773828103487594645}
   m_Layer: 0
   m_Name: Flagellum
@@ -80,7 +79,7 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &-5010954986884404564
+--- !u!114 &6465528565774065239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,21 +88,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3379663357691933048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bfbc7fb611c416591f62bc7f9ff9d0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7933f3db730e4f04868990fab09a72d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::CellPart
---- !u!114 &-1861861584003731643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379663357691933048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9ce187418894019ae23e8fe159418c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Main::CellDockingInitiator
+  isDock: 0
 --- !u!114 &7773828103487594645
 MonoBehaviour:
   m_ObjectHideFlags: 0
