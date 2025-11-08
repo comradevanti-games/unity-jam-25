@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public record DockingIncident(
     Cell CellA,
@@ -8,8 +9,12 @@ public record DockingIncident(
     Cell CellB,
     CellPart PartB);
 
+public record DockEventArg(CellPart Parent, CellPart Child);
+
 public class CellDockingManager : MonoBehaviour
 {
+    public UnityEvent<DockEventArg> partDocked = new UnityEvent<DockEventArg>();
+
     private readonly ISet<DockingIncident> unresolvedIncidents =
         new HashSet<DockingIncident>();
 
@@ -21,6 +26,8 @@ public class CellDockingManager : MonoBehaviour
 
         child.Parent!.Part = parent;
         parent.Children!.Dock(child);
+
+        partDocked.Invoke(new DockEventArg(parent, child));
     }
 
     private void Resolve(DockingIncident incident)
