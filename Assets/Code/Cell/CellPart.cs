@@ -87,6 +87,6 @@ public class CellPart : MonoBehaviour
 
     private void OnDestroy()
     {
-        FindAnyObjectByType<EnergyHandler>().ReturnEnergy(energyContent);
+        FindAnyObjectByType<EnergyHandler>()?.ReturnEnergy(energyContent);
     }
 }
