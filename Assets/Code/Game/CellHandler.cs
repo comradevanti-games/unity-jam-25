@@ -20,7 +20,7 @@ public class CellHandler : MonoBehaviour {
 
     }
 
-    public void SpawnCell(GameObject cellToSpawn, Vector3 position) {
+    public Transform? SpawnCell(GameObject cellToSpawn, Vector3 position) {
 
         GameObject cellGameObject = Instantiate(cellToSpawn, position, Quaternion.identity);
         Cell? cell = UnzipCell(cellGameObject);
@@ -28,21 +28,21 @@ public class CellHandler : MonoBehaviour {
         if (cell != null) {
             cell.Root.gameObject.GetComponent<CellEnergyStore>().died.AddListener(OnCellDeath);
             LivingCells.Add(cell);
+
+            return cell.Root.gameObject.transform;
         }
+
+        return null;
 
     }
 
     private Cell? UnzipCell(GameObject cellPrefab) {
 
-        Cell? c = CellQ.CellOf(cellPrefab);
-
-        Debug.Log(c);
+        Cell? c = CellQ.CellOf(cellPrefab.GetComponentInChildren<CellBrain>().gameObject);
 
         if (c == null) return null;
 
-        foreach (Transform t in cellPrefab.transform) {
-            t.SetParent(null, true);
-        }
+        cellPrefab.transform.DetachChildren();
 
         Destroy(cellPrefab);
 
