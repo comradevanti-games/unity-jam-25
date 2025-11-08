@@ -2,25 +2,25 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputHandler : MonoBehaviour
-{
+public class InputHandler : MonoBehaviour {
+
     public event Action<Vector2>? MovementInputHandled;
+
     public event Action<float>? TurnInput;
+
+    public event Action<bool>? QuitInput;
 
     private bool gameInputLocked = true;
 
-    private void Awake()
-    {
+    private void Awake() {
         FindAnyObjectByType<GameHandler>().GameInitialized += OnGameInitialized;
     }
 
-    private void OnGameInitialized(bool isInitialized)
-    {
+    private void OnGameInitialized(bool isInitialized) {
         gameInputLocked = !isInitialized;
     }
 
-    public void OnMovementInputReceived(InputAction.CallbackContext ctx)
-    {
+    public void OnMovementInputReceived(InputAction.CallbackContext ctx) {
         if (gameInputLocked) return;
 
         if (ctx.performed)
@@ -29,11 +29,23 @@ public class InputHandler : MonoBehaviour
         if (ctx.canceled) MovementInputHandled?.Invoke(Vector2.zero);
     }
 
-    public void OnTurnInputReceived(InputAction.CallbackContext ctx)
-    {
+    public void OnTurnInputReceived(InputAction.CallbackContext ctx) {
         if (gameInputLocked) return;
 
         if (ctx.performed) TurnInput?.Invoke(ctx.ReadValue<float>());
         else if (ctx.canceled) TurnInput?.Invoke(0);
     }
+
+    public void OnQuitInputReceived(InputAction.CallbackContext ctx) {
+
+        if (ctx.started) {
+            QuitInput?.Invoke(true);
+        }
+
+        if (ctx.canceled) {
+            QuitInput?.Invoke(false);
+        }
+
+    }
+
 }
