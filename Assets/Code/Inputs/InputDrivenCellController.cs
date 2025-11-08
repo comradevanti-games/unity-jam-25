@@ -13,9 +13,10 @@ public class InputDrivenCellController : MonoBehaviour
         if (turnDirection != 0f) brain.ApplyTurn(turnDirection);
     }
 
-    private void OnMovementInput(Vector3 direction)
+    private void OnMovementInput(Vector2 direction)
     {
-        moveDirection = direction;
+        var absolute = new Vector3(direction.x, 0, direction.y);
+        moveDirection = transform.InverseTransformDirection(absolute);
     }
 
     private void OnTurnInput(float direction)
@@ -26,8 +27,8 @@ public class InputDrivenCellController : MonoBehaviour
     private void Awake()
     {
         brain = GetComponent<CellBrain>();
-        FindAnyObjectByType<RelativeDirectionalInput>()
-            .inputReceived.AddListener(OnMovementInput);
-        FindAnyObjectByType<InputHandler>().TurnInput += OnTurnInput;
+        var inputHandler = FindAnyObjectByType<InputHandler>();
+        inputHandler.TurnInput += OnTurnInput;
+        inputHandler.MovementInputHandled += OnMovementInput;
     }
 }
