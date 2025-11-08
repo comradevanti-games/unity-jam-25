@@ -6,22 +6,20 @@ public class NutrientHandler : MonoBehaviour {
 
     public event Action<float> NutrientConsumed;
 
-    [SerializeField] private int maxAmount = 0;
     [SerializeField] private GameObject smallNutrientPrefab = null;
 
     private List<Nutrient> currentNutrients = new();
 
-    private void Start() {
+    public void SpawnNutrient(int amount) {
 
         World world = FindAnyObjectByType<World>();
 
-        for (int i = 0; i <= maxAmount; i++) {
+        for (int i = 0; i <= amount; i++) {
             Nutrient n = Instantiate(smallNutrientPrefab, world.GetRandomWorldPoint(), Quaternion.identity)
                 .GetComponent<Nutrient>();
             n.Consumed += OnNutrientConsumed;
             currentNutrients.Add(n);
         }
-
     }
 
     private void OnNutrientConsumed(Nutrient consumedNutrient) {

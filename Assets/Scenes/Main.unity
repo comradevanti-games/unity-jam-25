@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 205352720}
   - component: {fileID: 205352721}
   - component: {fileID: 205352722}
+  - component: {fileID: 205352724}
+  - component: {fileID: 205352723}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -177,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e94ec1bfd33ed41a27b2ff6b5d7ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::NutrientHandler
-  maxAmount: 1000
   smallNutrientPrefab: {fileID: 6914094712483467761, guid: a67e15b9fbdad1c4989ad4ddb868a864, type: 3}
 --- !u!114 &205352722
 MonoBehaviour:
@@ -191,6 +192,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7902f0cf804340249c83b0d011bff7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::CellDockingManager
+  partDocked:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &205352723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205352718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e85fd352c0a1d4fa59395ab3bfc6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Main::CellPartHandler
+  availableCellParts:
+  - {fileID: 3379663357691933048, guid: 84d1288d7e4307542bebe7df23eb0525, type: 3}
+--- !u!114 &205352724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205352718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886e19576cd3aa340bbedddd503355c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Main::EnergyHandler
+  totalEnergyAmount: 1000
+  cellPartPercentage: 0.2
+  storedEnergyReleaseThreshold: 10
 --- !u!1001 &272657180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -666,7 +699,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
