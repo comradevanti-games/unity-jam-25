@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -6,4 +7,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class CellChildren : MonoBehaviour
 {
+    private readonly ISet<CellPart> parts = new HashSet<CellPart>();
+
+    public IEnumerable<CellPart> Parts => parts;
+
+    public void Dock(CellPart child)
+    {
+        parts.Add(child);
+    }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1011287555223302826}
   - component: {fileID: 6485814407229029433}
   - component: {fileID: -6139589942095921669}
+  - component: {fileID: 2432261929495128512}
   m_Layer: 0
   m_Name: Cell Brain
   m_TagString: Untagged
@@ -86,6 +87,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ce187418894019ae23e8fe159418c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::CellDockingInitiator
+--- !u!114 &2432261929495128512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418255394500476644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4512d1e2c846dcb480e140c140357e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Main::CellBrain
 --- !u!1 &8927399813073680146
 GameObject:
   m_ObjectHideFlags: 0

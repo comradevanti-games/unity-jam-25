@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7987920993227310333}
   - component: {fileID: -5010954986884404564}
   - component: {fileID: -1861861584003731643}
+  - component: {fileID: 7773828103487594645}
   m_Layer: 0
   m_Name: Flagellum
   m_TagString: Untagged
@@ -103,6 +104,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ce187418894019ae23e8fe159418c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::CellDockingInitiator
+--- !u!114 &7773828103487594645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3379663357691933048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f1fbd28707411fa69cec356c02958e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Main::ForwardMovementMotor
+  maxMovementForce: 2
 --- !u!1 &6039863583478757022
 GameObject:
   m_ObjectHideFlags: 0

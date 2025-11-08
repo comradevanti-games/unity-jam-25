@@ -59,5 +59,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6418255394500476644, guid: 7438477a882d6d6fb9208eed42693630, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7161803516401614642}
   m_SourcePrefab: {fileID: 100100000, guid: 7438477a882d6d6fb9208eed42693630, type: 3}
+--- !u!1 &8241851153189004274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6418255394500476644, guid: 7438477a882d6d6fb9208eed42693630, type: 3}
+  m_PrefabInstance: {fileID: 3130800752169458966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7161803516401614642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8241851153189004274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936273443b304293aab9bd2ff376054e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Main::InputDrivenCellController

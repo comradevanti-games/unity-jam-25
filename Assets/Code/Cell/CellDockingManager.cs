@@ -20,6 +20,7 @@ public class CellDockingManager : MonoBehaviour
         Debug.Assert(child.Parent);
 
         child.Parent!.Part = parent;
+        parent.Children!.Dock(child);
     }
 
     private void Resolve(DockingIncident incident)
