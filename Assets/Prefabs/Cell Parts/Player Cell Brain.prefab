@@ -50,7 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418255394500476644, guid: 7438477a882d6d6fb9208eed42693630, type: 3}
       propertyPath: m_Name
-      value: Cell Brain
+      value: Player Cell Brain
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418255394500476644, guid: 7438477a882d6d6fb9208eed42693630, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
