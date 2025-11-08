@@ -30,8 +30,8 @@ public class CameraFollow : MonoBehaviour {
 
         Vector3 targetPosition = new(
             followTransform.position.x,
-            followTransform.position.y,
-            -zDistance
+            zDistance,
+            followTransform.position.z
         );
 
         transform.position = targetPosition;
