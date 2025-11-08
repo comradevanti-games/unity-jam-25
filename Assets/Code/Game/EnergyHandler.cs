@@ -4,9 +4,12 @@ using Random = UnityEngine.Random;
 
 public class EnergyHandler : MonoBehaviour {
 
-    [SerializeField] private float totalEnergyAmount = 1000f;
-    [SerializeField] private int initialCellParts = 5;
+    [SerializeField] private float maxEnergyAmount = 500f;
+    [SerializeField] private float initialCellPartPercentage = 5f;
+    [SerializeField] private float defaultCellPartEnergy = 15f;
+    [SerializeField] private float defaultNutrientPartEnergy = 2f;
     [SerializeField] private float cellPartAppearChance = 0.2f;
+    [SerializeField] private float enemyAppearChance = 0.1f;
     [SerializeField] private float storedEnergyReleaseThreshold = 10f;
 
     private CellPartHandler cellPartHandler = null;
@@ -20,14 +23,25 @@ public class EnergyHandler : MonoBehaviour {
     }
 
     public void InitializeWorldEnergy() {
-        nutrientHandler.SpawnNutrient((int)(totalEnergyAmount / 2f));
-        cellPartHandler.SpawnCellPart(8);
+
+        StoredWorldEnergy = maxEnergyAmount;
+
+        float cellPartEnergy = StoredWorldEnergy * initialCellPartPercentage;
+        int cellPartAmount = (int)(cellPartEnergy / defaultCellPartEnergy);
+        //TODO: Replace defaultCellPartEnergy with energy that is needed to create certain cell parts.
+        cellPartHandler.SpawnCellPart(cellPartAmount);
+        UseWorldEnergy(cellPartEnergy);
+        nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / defaultNutrientPartEnergy));
+        UseWorldEnergy(StoredWorldEnergy);
     }
 
-    public void UseWorldEnergy(float usedEnergy) {
+    private void UseWorldEnergy(float usedEnergy) {
 
-        if (totalEnergyAmount - usedEnergy > 0) {
-            totalEnergyAmount -= usedEnergy;
+        if (StoredWorldEnergy - usedEnergy >= 0) {
+            StoredWorldEnergy -= usedEnergy;
+        }
+        else {
+            Debug.Log("No Energy available!");
         }
 
     }
