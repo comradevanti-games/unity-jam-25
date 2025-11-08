@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 346490860}
   - component: {fileID: 346490861}
   - component: {fileID: 346490862}
+  - component: {fileID: 346490863}
   m_Layer: 0
   m_Name: InputHandler
   m_TagString: Untagged
@@ -263,6 +264,23 @@ MonoBehaviour:
   m_DefaultActionMap: Game
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 330585545}
+--- !u!114 &346490863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346490859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a64a5e3c2834436833157c703d5264e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Main::RelativeDirectionalInput
+  inputHandler: {fileID: 346490861}
+  relativeTarget: {fileID: 8323977437177302132}
+  inputReceived:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +692,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c4a75e2861fea2a8a252f527288971, type: 3}
+--- !u!4 &8323977437177302132 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4605381699023684343, guid: 05c4a75e2861fea2a8a252f527288971, type: 3}
+  m_PrefabInstance: {fileID: 8323977437177302131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
