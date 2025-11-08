@@ -1,18 +1,29 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CellEnergyStore : MonoBehaviour
 {
+    public UnityEvent died = new UnityEvent();
+
     [SerializeField] private float initialEnergy;
 
     private EnergyHandler energyHandler = null!;
 
     public float Energy { get; private set; }
 
+    private void Die()
+    {
+        var cell = CellQ.CellOf(gameObject)!;
+        CellQ.Destroy(cell);
+    }
+
     public void Burn(float amount)
     {
         amount = Mathf.Min(Energy, amount);
         Energy -= amount;
         energyHandler.OnEnergyBurned(amount);
+
+        if (Energy == 0) Die();
     }
 
     private void Awake()
