@@ -7,6 +7,7 @@ public class GameHandler : MonoBehaviour {
 
     private void Start() {
         GameInitialized?.Invoke(true);
+        Debug.Log(FindAnyObjectByType<World>().GetRandomWorldPoint());
     }
 
 }
