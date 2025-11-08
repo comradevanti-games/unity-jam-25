@@ -48,10 +48,8 @@ public class EnergyHandler : MonoBehaviour {
         if (percentage < cellPartAppearChance) {
             cellPartHandler.SpawnCellPart(1);
         }
-        else {
-            nutrientHandler.SpawnNutrient(5);
-        }
 
+        nutrientHandler.SpawnNutrient(5);
         StoredWorldEnergy = 0;
 
     }
