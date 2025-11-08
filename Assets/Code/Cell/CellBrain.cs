@@ -1,16 +1,15 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(CellChildren))]
+[RequireComponent(typeof(CellPart))]
 public class CellBrain : MonoBehaviour
 {
-    private CellChildren children = null!;
+    private CellPart part = null!;
 
 
     private IEnumerable<IMotor> Motors =>
-        children.Parts.Select(part => part.GameObject)
-            .SelectNotNull(g => g.GetComponent<IMotor>());
+        CellQ.IterDockedPartsRecursive(part)
+            .SelectNotNull(it => it.GetComponent<IMotor>());
 
     public void ApplyMovement(Vector3 direction)
     {
@@ -24,6 +23,6 @@ public class CellBrain : MonoBehaviour
 
     private void Awake()
     {
-        children = GetComponent<CellChildren>();
+        part = GetComponent<CellPart>();
     }
 }

@@ -1,0 +1,76 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody))]
+public class CellPart : MonoBehaviour
+{
+    [SerializeField] private bool isDock;
+
+    private CellDockingManager cellDockingManager;
+    private FixedJoint? dockJoint;
+    private new Rigidbody rigidbody = null!;
+    private CellPart? dock;
+    private readonly ISet<CellPart> docked = new HashSet<CellPart>();
+
+    /// <summary>
+    /// Whether this part can dock onto other parts
+    /// </summary>
+    public bool CanDock => dockJoint;
+
+    /// <summary>
+    /// Whether other parts can dock onto this one.
+    /// </summary>
+    public bool IsDock => isDock;
+
+    public CellPart? Dock
+    {
+        get => dock;
+        set
+        {
+            if (!CanDock) return;
+            if (value != null && !value.IsDock) return;
+
+            if (dock != null)
+                dock.docked.Remove(this);
+
+            dock = value;
+            dockJoint!.connectedBody = value?.rigidbody;
+
+            if (dock != null)
+                dock.docked.Add(this);
+        }
+    }
+
+    /// <summary>
+    /// Whether this part is currently docked onto some other part.
+    /// </summary>
+    public bool IsDocked => dock != null;
+
+    public IEnumerable<CellPart> Docked => docked;
+
+    private void Awake()
+    {
+        dockJoint = GetComponent<FixedJoint>();
+        rigidbody = GetComponent<Rigidbody>();
+        cellDockingManager = FindAnyObjectByType<CellDockingManager>();
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        // Check if we collided with a cell
+        var otherPart = CellQ.TryAsCellPart(other.gameObject);
+        if (otherPart == null) return;
+
+        // If the other part is already part of some larger structure then
+        // we can't dock with it.
+        if (otherPart.IsDocked) return;
+
+        // If this part is not part of a cell then it should not dock with
+        // other parts
+        var selfCell = CellQ.CellOf(this);
+        if (selfCell == null) return;
+
+        var incident = new DockingIncident(selfCell, this, otherPart);
+        cellDockingManager.ReportDockingIncident(incident);
+    }
+}

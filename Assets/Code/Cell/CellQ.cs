@@ -3,57 +3,38 @@ using UnityEngine;
 
 public record Cell(CellPart Root);
 
-public record CellPart(
-    GameObject GameObject,
-    CellParent? Parent,
-    CellChildren? Children);
-
 public static class CellQ
 {
     public static bool IsPlayerCell(Cell cell) =>
-        cell.Root.GameObject.CompareTag("Player");
+        cell.Root.CompareTag("Player");
 
-    public static IEnumerable<CellPart> IterSubParts(CellPart part)
+    public static IEnumerable<CellPart> IterDockedPartsRecursive(CellPart part)
     {
         yield return part;
 
-        if (part.Children is not { } children) yield break;
-
-        foreach (var directChild in children.Parts)
-        foreach (var child in IterSubParts(directChild))
-            yield return child;
+        foreach (var directDocked in part.Docked)
+        foreach (var docked in IterDockedPartsRecursive(directDocked))
+            yield return docked;
     }
 
-    public static IEnumerable<CellPart> IterAllParts(Cell cell) =>
-        IterSubParts(cell.Root);
+    public static IEnumerable<CellPart> IterAllPartsIn(Cell cell) =>
+        IterDockedPartsRecursive(cell.Root);
 
-    public static CellPart? CellPartOf(GameObject go)
+    public static CellPart? TryAsCellPart(GameObject go) =>
+        go.GetComponent<CellPart>();
+
+    private static Cell? TryAsCell(CellPart part) =>
+        part.gameObject.GetComponent<CellBrain>()
+            ? new Cell(part)
+            : null;
+
+    public static Cell? CellOf(CellPart part)
     {
-        var parent = go.GetComponent<CellParent>();
-        var children = go.GetComponent<CellChildren>();
+        // If we are not docked then we check if we are a cell root
+        if (part.Dock is not { } dock) return TryAsCell(part);
 
-        if (parent == null && children == null) return null;
-
-        return new CellPart(go, parent, children);
-    }
-
-    public static Cell CellOf(CellPart part)
-    {
-        // If we could have a parent then we need to check if we are docked
-        if (part.Parent is { } parent)
-        {
-            var parentPart = parent.Part;
-
-            // If we are not attached to anything at the moment then we are
-            // the root
-            if (parentPart == null) return new Cell(part);
-
-            // Otherwise search for the root in the parent
-            return CellOf(parentPart);
-        }
-
-        // Otherwise we are the root
-        return new Cell(part);
+        // Otherwise search for the cell in the dock
+        return CellOf(dock);
     }
 
     public static bool IsSameCell(Cell a, Cell b) => a.Root == b.Root;
