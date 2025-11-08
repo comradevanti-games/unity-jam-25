@@ -10,6 +10,8 @@ public class NutrientHandler : MonoBehaviour {
 
     private List<Nutrient> currentNutrients = new();
 
+    public int NutrientAmount => currentNutrients.Count;
+
     public void SpawnNutrient(int amount) {
 
         World world = FindAnyObjectByType<World>();

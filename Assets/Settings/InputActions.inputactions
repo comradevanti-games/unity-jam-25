@@ -98,7 +98,7 @@
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";MK",
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -109,7 +109,40 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
+                    "groups": ";MK",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "LeftRight",
+                    "id": "7d65472b-5fc9-40da-a9a8-448fc97a6248",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
                     "groups": "",
+                    "action": "Turn",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "8d86b6ed-a6ed-42ad-a78f-b957a5a98d92",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";MK",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "888c55f4-bcd0-482c-80cd-502de613b300",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";MK",
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": true

@@ -9,6 +9,8 @@ public class CellPartHandler : MonoBehaviour {
 
     private List<GameObject> currentCellParts = new();
 
+    public int CellPartsAmount => currentCellParts.Count;
+
     public void SpawnCellPart(int amount) {
 
         World world = FindAnyObjectByType<World>();

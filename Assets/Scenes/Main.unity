@@ -237,9 +237,8 @@ MonoBehaviour:
   initialCellPartPercentage: 0.2
   defaultCellPartEnergy: 15
   defaultNutrientPartEnergy: 2
-  cellPartAppearChance: 0.2
+  cellPartAppearChance: 0.5
   enemyAppearChance: 0.1
-  storedEnergyReleaseThreshold: 10
 --- !u!1001 &215021767
 PrefabInstance:
   m_ObjectHideFlags: 0

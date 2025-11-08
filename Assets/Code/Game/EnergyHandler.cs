@@ -2,6 +2,14 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+public enum SpawnType {
+
+    Nutrient,
+    Cell,
+    Enemy
+
+}
+
 public class EnergyHandler : MonoBehaviour {
 
     [SerializeField] private float maxEnergyAmount = 500f;
@@ -10,12 +18,16 @@ public class EnergyHandler : MonoBehaviour {
     [SerializeField] private float defaultNutrientPartEnergy = 2f;
     [SerializeField] private float cellPartAppearChance = 0.2f;
     [SerializeField] private float enemyAppearChance = 0.1f;
-    [SerializeField] private float storedEnergyReleaseThreshold = 10f;
 
     private CellPartHandler cellPartHandler = null;
     private NutrientHandler nutrientHandler = null;
 
     public float StoredWorldEnergy { get; private set; }
+
+    private SpawnType QueuedSpawnType { get; set; }
+
+    private float CurrentWorldEnergy => cellPartHandler.CellPartsAmount * defaultCellPartEnergy +
+                                        nutrientHandler.NutrientAmount * defaultNutrientPartEnergy;
 
     private void Awake() {
         cellPartHandler = FindAnyObjectByType<CellPartHandler>();
@@ -33,6 +45,7 @@ public class EnergyHandler : MonoBehaviour {
         UseWorldEnergy(cellPartEnergy);
         nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / defaultNutrientPartEnergy));
         UseWorldEnergy(StoredWorldEnergy);
+        QueuedSpawnType = SpawnType.Nutrient;
     }
 
     private void UseWorldEnergy(float usedEnergy) {
@@ -49,23 +62,48 @@ public class EnergyHandler : MonoBehaviour {
     public void OnEnergyBurned(float burnedEnergy) {
         StoredWorldEnergy += burnedEnergy;
 
-        if (StoredWorldEnergy >= storedEnergyReleaseThreshold) {
-            ReleaseStoredEnergy();
+        if (CurrentWorldEnergy >= maxEnergyAmount) return;
+
+        if (QueuedSpawnType == SpawnType.Nutrient && StoredWorldEnergy >= defaultNutrientPartEnergy) {
+            ReleaseStoredEnergy(QueuedSpawnType);
+        }
+
+        if (QueuedSpawnType == SpawnType.Cell && StoredWorldEnergy >= defaultCellPartEnergy) {
+            ReleaseStoredEnergy(QueuedSpawnType);
         }
 
     }
 
-    private void ReleaseStoredEnergy() {
+    private void ReleaseStoredEnergy(SpawnType toSpawn) {
 
-        float percentage = Random.Range(0f, 1f);
+        if (toSpawn == SpawnType.Nutrient) {
+            nutrientHandler.SpawnNutrient(1);
+            UseWorldEnergy(defaultCellPartEnergy);
+        }
 
-        if (percentage < cellPartAppearChance) {
+        if (toSpawn == SpawnType.Cell) {
             cellPartHandler.SpawnCellPart(1);
         }
 
-        nutrientHandler.SpawnNutrient(5);
-        StoredWorldEnergy = 0;
+        GetNextSpawnType();
+        Debug.Log("Released Stored Energy!");
+        Debug.Log("Rerolled to next: " + QueuedSpawnType);
 
+    }
+
+    private void GetNextSpawnType() {
+
+        float percentage = Random.Range(0f, 1f);
+
+        if (percentage < enemyAppearChance) {
+            //TODO: Spawn Enemy
+        }
+
+        if (percentage < cellPartAppearChance) {
+            QueuedSpawnType = SpawnType.Cell;
+        }
+
+        QueuedSpawnType = SpawnType.Nutrient;
     }
 
 }
