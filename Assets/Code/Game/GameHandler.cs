@@ -8,6 +8,7 @@ public class GameHandler : MonoBehaviour {
     private EnergyHandler energyHandler = null;
 
     private void Awake() {
+        Application.targetFrameRate = 60;
         energyHandler = FindAnyObjectByType<EnergyHandler>();
     }
 

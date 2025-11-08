@@ -2,9 +2,9 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CellEnergyStore : MonoBehaviour
-{
-    public UnityEvent died = new UnityEvent();
+public class CellEnergyStore : MonoBehaviour {
+
+    public UnityEvent<Cell> died = new UnityEvent<Cell>();
 
     [SerializeField] private float initialEnergy;
 
@@ -12,15 +12,14 @@ public class CellEnergyStore : MonoBehaviour
 
     public float Energy { get; private set; }
 
-    private void Die()
-    {
+    private void Die() {
         var cell = CellQ.CellOf(gameObject)!;
         var parts = CellQ.IterAllPartsIn(cell).ToArray();
         foreach (var part in parts) Destroy(part.gameObject);
+        died?.Invoke(cell);
     }
 
-    public void Burn(float amount)
-    {
+    public void Burn(float amount) {
         amount = Mathf.Min(Energy, amount);
         Energy -= amount;
         energyHandler.ReturnEnergy(amount);
@@ -28,9 +27,9 @@ public class CellEnergyStore : MonoBehaviour
         if (Energy == 0) Die();
     }
 
-    private void Awake()
-    {
+    private void Awake() {
         Energy = initialEnergy;
         energyHandler = FindAnyObjectByType<EnergyHandler>();
     }
+
 }

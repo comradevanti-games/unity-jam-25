@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 346490861}
   - component: {fileID: 346490862}
   - component: {fileID: 346490863}
+  - component: {fileID: 346490864}
   m_Layer: 0
   m_Name: InputHandler
   m_TagString: Untagged
@@ -512,6 +513,18 @@ MonoBehaviour:
   inputReceived:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &346490864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346490859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e26f8b831655447878ba8de0553a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Main::SystemInputs
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
