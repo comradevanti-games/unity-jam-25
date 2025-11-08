@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,7 +15,8 @@ public class CellEnergyStore : MonoBehaviour
     private void Die()
     {
         var cell = CellQ.CellOf(gameObject)!;
-        CellQ.Destroy(cell);
+        var parts = CellQ.IterAllPartsIn(cell).ToArray();
+        foreach (var part in parts) Destroy(part.gameObject);
     }
 
     public void Burn(float amount)

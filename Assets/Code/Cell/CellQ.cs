@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public record Cell(CellPart Root);
@@ -46,12 +45,6 @@ public static class CellQ
         var part = TryAsCellPart(go);
         if (part is null) return null;
         return CellOf(part);
-    }
-
-    public static void Destroy(Cell cell)
-    {
-        var parts = IterAllPartsIn(cell).ToArray();
-        foreach (var part in parts) Object.Destroy(part.gameObject);
     }
 
     public static bool IsSameCell(Cell a, Cell b) => a.Root == b.Root;
