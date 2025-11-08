@@ -36,6 +36,8 @@ public class CellHandler : MonoBehaviour {
 
         Cell? c = CellQ.CellOf(cellPrefab);
 
+        Debug.Log(c);
+
         if (c == null) return null;
 
         foreach (Transform t in cellPrefab.transform) {

@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886e19576cd3aa340bbedddd503355c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::EnergyHandler
-  maxEnergyAmount: 1200
+  maxEnergyAmount: 1000
   initialCellPartPercentage: 0.2
   defaultCellPartEnergy: 15
   defaultNutrientPartEnergy: 2
