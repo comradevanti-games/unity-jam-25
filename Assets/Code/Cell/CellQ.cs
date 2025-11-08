@@ -20,6 +20,9 @@ public static class CellQ
     public static IEnumerable<CellPart> IterAllPartsIn(Cell cell) =>
         IterDockedPartsRecursive(cell.Root);
 
+    public static float EnergyOf(Cell cell) =>
+        cell.Root.GetComponent<CellEnergyStore>().Energy;
+
     public static CellPart? TryAsCellPart(GameObject go) =>
         go.GetComponent<CellPart>();
 

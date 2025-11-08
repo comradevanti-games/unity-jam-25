@@ -1,13 +1,15 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CellPart))]
 public class ForwardMovementMotor : MonoBehaviour, IMotor
 {
     [SerializeField] private float maxMovementForce;
     [SerializeField] private float turnForce;
     [SerializeField] private float energyBurnRate;
 
+    private CellEnergyStore? energyStore;
     private new Rigidbody rigidbody = null!;
-    private EnergyHandler energyHandler = null!;
 
     public void MoveIn(Vector3 direction)
     {
@@ -18,7 +20,7 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
         rigidbody.AddForce(transform.forward * force, ForceMode.Force);
 
         var burnedEnergy = force * energyBurnRate * Time.fixedDeltaTime;
-        energyHandler.OnEnergyBurned(burnedEnergy);
+        energyStore?.Burn(burnedEnergy);
     }
 
     public void TurnIn(float direction)
@@ -27,12 +29,26 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
             ForceMode.Force);
 
         var burnedEnergy = turnForce * Time.fixedDeltaTime;
-        energyHandler.OnEnergyBurned(burnedEnergy);
+        energyStore?.Burn(burnedEnergy);
+    }
+
+    private void OnDockChanged(CellPart? dock)
+    {
+        if (dock == null)
+        {
+            energyStore = null;
+            return;
+        }
+
+        var cell = CellQ.CellOf(dock!);
+        Debug.Assert(cell != null);
+
+        energyStore = cell!.Root.GetComponent<CellEnergyStore>();
     }
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
-        energyHandler = FindAnyObjectByType<EnergyHandler>();
+        GetComponent<CellPart>().dockChanged.AddListener(OnDockChanged);
     }
 }
