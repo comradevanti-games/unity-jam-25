@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
 
-    [SerializeField] private float zDistance = 10f;
+    [SerializeField] private float yDistance = 10f;
     [SerializeField] private Transform defaultTarget = null;
 
     private Transform followTransform = null;
@@ -30,7 +30,7 @@ public class CameraFollow : MonoBehaviour {
 
         Vector3 targetPosition = new(
             followTransform.position.x,
-            zDistance,
+            yDistance,
             followTransform.position.z
         );
 

@@ -13,7 +13,8 @@ public class CellHandler : MonoBehaviour {
 
         if (CellQ.IsPlayerCell(dyingCell)) {
             LivingCells.Remove(dyingCell);
-            SpawnCell(playerCell, new Vector3(0, 1, 0));
+            Transform? t = SpawnCell(playerCell, new Vector3(0, 1, 0));
+            Camera.main!.GetComponent<CameraFollow>().SetFollowTarget(t!);
         }
 
         LivingCells.Remove(dyingCell);

@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Main::ForwardMovementMotor
   maxMovementForce: 2
   turnForce: 0.5
-  energyBurnRate: 1
+  energyBurnRate: 0.2
 --- !u!114 &-2831987997846321969
 MonoBehaviour:
   m_ObjectHideFlags: 0

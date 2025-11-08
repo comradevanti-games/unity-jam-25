@@ -35,17 +35,14 @@ public class EnergyHandler : MonoBehaviour {
     }
 
     public void InitializeWorldEnergy() {
-
         StoredWorldEnergy = maxEnergyAmount;
-
         float cellPartEnergy = StoredWorldEnergy * initialCellPartPercentage;
         int cellPartAmount = (int)(cellPartEnergy / defaultCellPartEnergy);
-        //TODO: Replace defaultCellPartEnergy with energy that is needed to create certain cell parts.
         cellPartHandler.SpawnCellPart(cellPartAmount);
         UseWorldEnergy(cellPartEnergy);
         nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / defaultNutrientPartEnergy));
         UseWorldEnergy(StoredWorldEnergy);
-        QueuedSpawnType = SpawnType.Nutrient;
+        GetNextSpawnType();
     }
 
     private void UseWorldEnergy(float usedEnergy) {
@@ -59,14 +56,14 @@ public class EnergyHandler : MonoBehaviour {
 
     }
 
-    public void ReturnEnergy(float amount)
-    {
+    public void ReturnEnergy(float amount) {
         StoredWorldEnergy += amount;
 
         if (CurrentWorldEnergy >= maxEnergyAmount) return;
 
         if (QueuedSpawnType == SpawnType.Nutrient && StoredWorldEnergy >= defaultNutrientPartEnergy) {
             ReleaseStoredEnergy(QueuedSpawnType);
+            return;
         }
 
         if (QueuedSpawnType == SpawnType.Cell && StoredWorldEnergy >= defaultCellPartEnergy) {
@@ -102,6 +99,8 @@ public class EnergyHandler : MonoBehaviour {
 
         if (percentage < cellPartAppearChance) {
             QueuedSpawnType = SpawnType.Cell;
+
+            return;
         }
 
         QueuedSpawnType = SpawnType.Nutrient;

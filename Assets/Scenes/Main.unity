@@ -239,7 +239,7 @@ MonoBehaviour:
   initialCellPartPercentage: 0.2
   defaultCellPartEnergy: 15
   defaultNutrientPartEnergy: 2
-  cellPartAppearChance: 0.5
+  cellPartAppearChance: 0.2
   enemyAppearChance: 0.1
 --- !u!114 &205352725
 MonoBehaviour:
