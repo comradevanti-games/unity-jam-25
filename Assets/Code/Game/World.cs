@@ -8,27 +8,45 @@ public class World : MonoBehaviour {
     public event Action? SafeAreaCompleted;
 
     [SerializeField] private GameObject safeAreaBlockGameObject = null;
-    [SerializeField] private Transform areaContainer = null;
+    [SerializeField] private Transform safeAreaContainer = null;
+    [SerializeField] private Transform fullAreaContainer = null;
 
-    private readonly List<Vector2> areaPoints = new();
+    private List<Vector2> areaPoints = new();
     private readonly Random rand = new();
+
+    private bool hasSafeAreaCompleted = false;
 
     private void Awake() {
 
-        foreach (Transform child in areaContainer) {
-            areaPoints.Add(new Vector2(child.position.x, child.position.z));
+        SetAreaPoints();
+        FindAnyObjectByType<CellHandler>().SafeAreaCompleted += OnSafeAreaCompleted;
+
+    }
+
+    private void SetAreaPoints() {
+
+        areaPoints = new();
+
+        if (!hasSafeAreaCompleted) {
+            foreach (Transform child in safeAreaContainer) {
+                areaPoints.Add(new Vector2(child.position.x, child.position.z));
+            }
+        }
+        else {
+            foreach (Transform child in fullAreaContainer) {
+                areaPoints.Add(new Vector2(child.position.x, child.position.z));
+            }
         }
 
         if (areaPoints.Count < 3) {
             throw new ArgumentException("World Area must have at least 3 Points!");
         }
 
-        FindAnyObjectByType<CellHandler>().SafeAreaCompleted += OnSafeAreaCompleted;
-
     }
 
     public void OnSafeAreaCompleted() {
         Destroy(safeAreaBlockGameObject);
+        hasSafeAreaCompleted = true;
         SafeAreaCompleted?.Invoke();
     }
 
