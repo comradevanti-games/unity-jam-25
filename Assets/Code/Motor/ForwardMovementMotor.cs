@@ -18,7 +18,7 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
     public void MoveIn(Vector3 direction)
     {
         var scale = Vector3.Dot(transform.forward, direction);
-        if (scale < 0.75) return;
+        if (scale < 0.5) return;
 
         var force = maxMovementForce * scale;
         rigidbody.AddForce(transform.forward * force, ForceMode.Force);
