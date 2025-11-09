@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -237,6 +241,10 @@ PrefabInstance:
     - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
       propertyPath: m_Name
       value: PlaneSmall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -357,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -413,6 +425,10 @@ PrefabInstance:
     - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
       propertyPath: m_Name
       value: RockComboBigA (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -498,6 +514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -579,6 +599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockSingelB (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478663281121685221, guid: f313a0811250be54d983f95441f398c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -640,6 +664,10 @@ PrefabInstance:
     - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
       propertyPath: m_Name
       value: PlaneSmall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -841,6 +869,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -901,6 +933,10 @@ PrefabInstance:
     - target: {fileID: 6478663281121685221, guid: f313a0811250be54d983f95441f398c8, type: 3}
       propertyPath: m_Name
       value: RockSingelB (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478663281121685221, guid: f313a0811250be54d983f95441f398c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -963,6 +999,10 @@ PrefabInstance:
     - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
       propertyPath: m_Name
       value: RockComboBigA (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1057,6 +1097,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1254,6 +1298,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1489,6 +1537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1520,6 +1572,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -1600,7 +1656,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &511980910
 MeshCollider:
@@ -1747,6 +1803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneSmall
       objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1773,6 +1833,10 @@ PrefabInstance:
     - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_Name
       value: RockCornerA (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7535685437971559283, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1871,6 +1935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1924,9 +1992,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6546934511822567317, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8443799778156927310, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
       propertyPath: m_Name
       value: PlaneCorner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443799778156927310, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1989,6 +2065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockSingelB
       objectReference: {fileID: 0}
+    - target: {fileID: 6478663281121685221, guid: f313a0811250be54d983f95441f398c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2047,9 +2127,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 203.183
       objectReference: {fileID: 0}
+    - target: {fileID: 6546934511822567317, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8443799778156927310, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
       propertyPath: m_Name
       value: PlaneCorner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443799778156927310, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2067,6 +2155,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -2177,6 +2269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2197,7 +2293,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &665900506
 Transform:
@@ -2294,6 +2390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2330,6 +2430,10 @@ PrefabInstance:
     - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_Name
       value: RockCornerA (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7535685437971559283, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_LocalScale.x
@@ -2443,6 +2547,10 @@ PrefabInstance:
     - target: {fileID: 6478663281121685221, guid: f313a0811250be54d983f95441f398c8, type: 3}
       propertyPath: m_Name
       value: RockSingelB (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478663281121685221, guid: f313a0811250be54d983f95441f398c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2564,6 +2672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockSingelB (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478663281121685221, guid: f313a0811250be54d983f95441f398c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2617,9 +2729,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -95.601
       objectReference: {fileID: 0}
+    - target: {fileID: 6546934511822567317, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8443799778156927310, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
       propertyPath: m_Name
       value: PlaneCorner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443799778156927310, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2688,6 +2808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneSmall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2724,6 +2848,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2822,6 +2950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneSmall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2894,6 +3026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2915,6 +3051,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2980,7 +3120,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1316190340
 Transform:
@@ -3069,6 +3209,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3167,6 +3311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3224,6 +3372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3243,7 +3395,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1410678601
 Transform:
@@ -3316,6 +3468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3337,6 +3493,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -3447,6 +3607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3500,9 +3664,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 98.184
       objectReference: {fileID: 0}
+    - target: {fileID: 6546934511822567317, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8443799778156927310, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
       propertyPath: m_Name
       value: PlaneCorner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443799778156927310, guid: b2b7f12ec85973744a87a4bb35b273e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3520,6 +3692,10 @@ PrefabInstance:
     - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_Name
       value: RockCornerA
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7535685437971559283, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3577,6 +3753,10 @@ PrefabInstance:
     - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_Name
       value: RockCornerA (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7535685437971559283, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3649,6 +3829,10 @@ PrefabInstance:
     - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_Name
       value: RockCornerA (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7535685437971559283, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3747,6 +3931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneSmall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3814,6 +4002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneSmall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3870,6 +4062,10 @@ PrefabInstance:
     - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
       propertyPath: m_Name
       value: PlaneSmall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3933,6 +4129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3995,6 +4195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneSmall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4011,6 +4215,10 @@ PrefabInstance:
     - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_Name
       value: SafeAreaBlockRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7535685437971559283, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4109,6 +4317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4170,6 +4382,10 @@ PrefabInstance:
     - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
       propertyPath: m_Name
       value: RockComboBigA (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4240,6 +4456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockSingelB (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478663281121685221, guid: f313a0811250be54d983f95441f398c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4266,6 +4486,10 @@ PrefabInstance:
     - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_Name
       value: RockComboA (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931262661059695826, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4333,6 +4557,10 @@ PrefabInstance:
     - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_Name
       value: RockCornerA (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7535685437971559283, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4443,6 +4671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4521,6 +4753,10 @@ PrefabInstance:
     - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
       propertyPath: m_Name
       value: RockComboBigA (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4605,6 +4841,10 @@ PrefabInstance:
     - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_Name
       value: RockCornerA (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403631812645034018, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7535685437971559283, guid: f8077a3bdeabd9a4bbbbfab49fc94cd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4708,6 +4948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockComboBigA (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4764,6 +5008,10 @@ PrefabInstance:
     - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
       propertyPath: m_Name
       value: PlaneSmall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4827,6 +5075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneSmall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4888,6 +5140,10 @@ PrefabInstance:
     - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
       propertyPath: m_Name
       value: RockComboBigA (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185599177279272427, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4955,6 +5211,10 @@ PrefabInstance:
     - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
       propertyPath: m_Name
       value: PlaneSmall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419056983346132004, guid: 971be8e3673078f40a5b4d9cd0348daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
