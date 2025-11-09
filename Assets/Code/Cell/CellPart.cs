@@ -93,9 +93,4 @@ public class CellPart : MonoBehaviour
         var incident = new DockingIncident(selfCell, this, otherPart);
         cellDockingManager.ReportDockingIncident(incident);
     }
-
-    private void OnDestroy()
-    {
-        FindAnyObjectByType<EnergyHandler>()?.ReturnEnergy(energyContent);
-    }
 }
