@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c39ce038c8ec94c9256edae60e2393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::Nutrient
-  energy: 2
+  energy: 5
   possibleNutrientForms:
   - {fileID: 4689315782421692561}
   - {fileID: 3291124835795183932}
