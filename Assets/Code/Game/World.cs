@@ -5,12 +5,17 @@ using Random = System.Random;
 
 public class World : MonoBehaviour {
 
+    public event Action SafeAreaCompleted;
+
+    [SerializeField] private GameObject safeAreaBlockGameObject = null;
+    [SerializeField] private Transform areaContainer = null;
+
     private readonly List<Vector2> areaPoints = new();
     private readonly Random rand = new();
 
     private void Awake() {
 
-        foreach (Transform child in transform) {
+        foreach (Transform child in areaContainer) {
             areaPoints.Add(new Vector2(child.position.x, child.position.z));
         }
 
@@ -18,6 +23,11 @@ public class World : MonoBehaviour {
             throw new ArgumentException("World Area must have at least 3 Points!");
         }
 
+    }
+
+    public void OnSafeAreaCompleted() {
+        Destroy(safeAreaBlockGameObject);
+        SafeAreaCompleted?.Invoke();
     }
 
     public Vector3 GetRandomWorldPoint() {
