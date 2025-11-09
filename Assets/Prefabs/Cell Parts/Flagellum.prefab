@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6465528565774065239}
   - component: {fileID: 7773828103487594645}
   - component: {fileID: -2831987997846321969}
+  - component: {fileID: 1686602676124891225}
   m_Layer: 0
   m_Name: Flagellum
   m_TagString: Untagged
@@ -124,6 +125,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1da939ba23f4a349be2d7c70e3768a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::NutrientCollector
+--- !u!135 &1686602676124891225
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3379663357691933048}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6711029842065674261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,7 +246,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.45
+  m_Radius: 0.1
   m_Height: 2.3
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: -1.2127175}

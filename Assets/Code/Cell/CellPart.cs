@@ -66,7 +66,7 @@ public class CellPart : MonoBehaviour
         cellDockingManager = FindAnyObjectByType<CellDockingManager>();
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         // Check if we collided with a cell
         var otherPart = CellQ.TryAsCellPart(other.gameObject);
