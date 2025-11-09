@@ -15,6 +15,6 @@ MonoBehaviour:
   maxEnergyAmount: 2000
   initialCellParts: 20
   defaultCellPartEnergy: 15
-  defaultNutrientPartEnergy: 2
+  defaultNutrientPartEnergy: 6
   cellPartAppearChance: 0.2
   enemyAppearChance: 0.1

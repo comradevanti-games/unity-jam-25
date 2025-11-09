@@ -34,7 +34,7 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
         rigidbody.AddTorque(Vector3.up * (direction * turnForce),
             ForceMode.Force);
 
-        var burnedEnergy = turnForce * Time.fixedDeltaTime;
+        var burnedEnergy = turnForce * Time.fixedDeltaTime * 0.5f;
         energyStore?.Burn(burnedEnergy);
 
         isMoving = true;
