@@ -938,7 +938,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Main::CellHandler
   playerCell: {fileID: 8190447219151489572, guid: af2590d5e412da049a8151228f4ab019, type: 3}
-  enemyCellPrefabs: []
+  enemyCellPrefabs:
+  - {fileID: 5943109564316381463, guid: 26f23a11d19c6b8708ed883f877b6e0c, type: 3}
   dockedPartsToCompleteSafeArea: 3
 --- !u!4 &226156008 stripped
 Transform:
