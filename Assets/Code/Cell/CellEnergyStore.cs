@@ -12,6 +12,7 @@ public class CellEnergyStore : MonoBehaviour {
 
     private EnergyHandler energyHandler = null!;
     private float energy;
+    private Color fullEnergyColor;
 
     public float Energy
     {
@@ -21,7 +22,7 @@ public class CellEnergyStore : MonoBehaviour {
             energy = value;
 
             var energyT = Mathf.InverseLerp(0, initialEnergy, energy);
-            var color = Color.Lerp(Color.black, Color.white, energyT);
+            var color = Color.Lerp(Color.black, fullEnergyColor, energyT);
             brainRenderer.material.SetColor(baseColor, color);
 
             if (Energy == 0) Die();
@@ -50,6 +51,7 @@ public class CellEnergyStore : MonoBehaviour {
     private void Awake() {
         Energy = initialEnergy;
         energyHandler = FindAnyObjectByType<EnergyHandler>();
+        fullEnergyColor = brainRenderer.material.color;
     }
 
 }
