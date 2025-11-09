@@ -8,6 +8,7 @@ public class CellPart : MonoBehaviour
     public UnityEvent<CellPart?> dockChanged = new UnityEvent<CellPart?>();
 
     [SerializeField] private bool isDock;
+    [SerializeField] private bool canDock;
     [SerializeField] private float energyContent;
 
     private CellDockingManager cellDockingManager = null!;
@@ -24,7 +25,7 @@ public class CellPart : MonoBehaviour
     /// <summary>
     /// Whether this part can dock onto other parts
     /// </summary>
-    public bool CanDock => dockJoint;
+    public bool CanDock => canDock;
 
     /// <summary>
     /// Whether other parts can dock onto this one.
@@ -40,14 +41,21 @@ public class CellPart : MonoBehaviour
             if (value != null && !value.IsDock) return;
 
             if (dock != null)
+            {
                 dock.docked.Remove(this);
+                Destroy(dockJoint);
+                dockJoint = null;
+            }
 
             dock = value;
-            dockJoint!.connectedBody = value?.rigidbody;
 
             if (dock != null)
+            {
                 dock.docked.Add(this);
-            
+                dockJoint = gameObject.AddComponent<FixedJoint>();
+                dockJoint.connectedBody = dock.rigidbody;
+            }
+
             dockChanged.Invoke(value);
         }
     }

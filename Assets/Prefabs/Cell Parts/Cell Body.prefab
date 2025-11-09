@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3899447639085988325}
   - component: {fileID: 1011287555223302826}
-  - component: {fileID: -8681011318149395499}
   - component: {fileID: 5206062615465510843}
   - component: {fileID: -2394421668463192392}
   - component: {fileID: 7473001080447946600}
@@ -65,22 +64,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!138 &-8681011318149395499
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6418255394500476644}
-  serializedVersion: 1
-  m_ConnectedBody: {fileID: 0}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!114 &5206062615465510843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +80,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isDock: 1
+  canDock: 1
   energyContent: 25
 --- !u!114 &-2394421668463192392
 MonoBehaviour:
