@@ -14,11 +14,13 @@ public class CellEnergyStore : MonoBehaviour {
     private float energy;
     private Color fullEnergyColor;
 
+    
     public float Energy
     {
         get => energy;
         private set
         {
+            if (Mathf.Approximately(value, energy)) return;
             energy = value;
 
             var energyT = Mathf.InverseLerp(0, initialEnergy, energy);
@@ -29,6 +31,8 @@ public class CellEnergyStore : MonoBehaviour {
         }
     }
 
+    private bool IsDead => Energy == 0;
+
     private void Die() {
         var cell = CellQ.CellOf(gameObject)!;
         var parts = CellQ.IterAllPartsIn(cell).ToArray();
@@ -38,11 +42,15 @@ public class CellEnergyStore : MonoBehaviour {
 
     public void Gain(float amount)
     {
+        if (IsDead) return;
+        
         Energy += amount;
     }
 
     public void Burn(float amount)
     {
+        if (IsDead) return;
+        
         amount = Mathf.Min(Energy, amount);
         energyHandler.ReturnEnergy(amount);
         Energy -= amount;
