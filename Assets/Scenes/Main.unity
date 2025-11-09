@@ -782,6 +782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Main::CellHandler
   playerCell: {fileID: 8190447219151489572, guid: af2590d5e412da049a8151228f4ab019, type: 3}
   enemyCellPrefabs: []
+  dockedPartsToCompleteSafeArea: 4
 --- !u!4 &226156008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1787232796152985383, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
@@ -1341,7 +1342,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.2
+    m_Strength: 0.185
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2

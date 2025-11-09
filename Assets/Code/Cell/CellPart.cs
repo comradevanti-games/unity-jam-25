@@ -47,7 +47,7 @@ public class CellPart : MonoBehaviour
 
             if (dock != null)
                 dock.docked.Add(this);
-
+            
             dockChanged.Invoke(value);
         }
     }

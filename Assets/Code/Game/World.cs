@@ -23,6 +23,8 @@ public class World : MonoBehaviour {
             throw new ArgumentException("World Area must have at least 3 Points!");
         }
 
+        FindAnyObjectByType<CellHandler>().SafeAreaCompleted += OnSafeAreaCompleted;
+
     }
 
     public void OnSafeAreaCompleted() {

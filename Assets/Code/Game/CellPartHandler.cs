@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class CellPartHandler : MonoBehaviour
-{
+public class CellPartHandler : MonoBehaviour {
+
+    public event Action<CellPart>? CellPartAttached;
+    
     [SerializeField] private GameObject[] availableCellParts = null;
 
     private List<GameObject> currentCellParts = new List<GameObject>();
@@ -26,7 +28,10 @@ public class CellPartHandler : MonoBehaviour
 
     public void OnCellPartAttached(DockEventArg e)
     {
-        if (currentCellParts.Contains(e.Child.gameObject))
+        if (currentCellParts.Contains(e.Child.gameObject)) {
             currentCellParts.Remove(e.Child.gameObject);
+            CellPartAttached?.Invoke(e.Child);
+        }
+        
     }
 }

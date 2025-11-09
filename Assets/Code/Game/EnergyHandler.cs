@@ -21,6 +21,7 @@ public class EnergyHandler : MonoBehaviour {
 
     private CellPartHandler cellPartHandler = null;
     private NutrientHandler nutrientHandler = null;
+    private World world = null;
 
     public float StoredWorldEnergy { get; private set; }
 
@@ -32,6 +33,8 @@ public class EnergyHandler : MonoBehaviour {
     private void Awake() {
         cellPartHandler = FindAnyObjectByType<CellPartHandler>();
         nutrientHandler = FindAnyObjectByType<NutrientHandler>();
+        world = FindAnyObjectByType<World>();
+        world.SafeAreaCompleted += OnSafeAreaCompleted;
     }
 
     public void InitializeWorldEnergy() {
@@ -43,6 +46,11 @@ public class EnergyHandler : MonoBehaviour {
         nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / defaultNutrientPartEnergy));
         UseWorldEnergy(StoredWorldEnergy);
         GetNextSpawnType();
+    }
+
+    public void OnSafeAreaCompleted() {
+        Debug.Log("Will reset the world energy!");
+
     }
 
     private void UseWorldEnergy(float usedEnergy) {
@@ -84,8 +92,6 @@ public class EnergyHandler : MonoBehaviour {
         }
 
         GetNextSpawnType();
-        Debug.Log("Released Stored Energy!");
-        Debug.Log("Rerolled to next: " + QueuedSpawnType);
 
     }
 
