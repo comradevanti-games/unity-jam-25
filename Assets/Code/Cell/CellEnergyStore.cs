@@ -19,6 +19,7 @@ public class CellEnergyStore : MonoBehaviour {
         get => energy;
         private set
         {
+            if (Mathf.Approximately(value, energy)) return;
             energy = value;
 
             var energyT = Mathf.InverseLerp(0, initialEnergy, energy);
