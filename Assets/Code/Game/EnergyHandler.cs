@@ -28,13 +28,10 @@ public class EnergyHandler : MonoBehaviour {
     private float CurrentWorldEnergy => cellPartHandler.CellPartsAmount * currentArea.defaultCellPartEnergy +
                                         nutrientHandler.NutrientAmount * currentArea.defaultNutrientPartEnergy;
 
-    private Cell PlayerCell { get; set; }
-
     private void Awake() {
         cellPartHandler = FindAnyObjectByType<CellPartHandler>();
         nutrientHandler = FindAnyObjectByType<NutrientHandler>();
         world = FindAnyObjectByType<World>();
-        PlayerCell = FindAnyObjectByType<CellHandler>().PlayerCell;
         world.SafeAreaCompleted += OnSafeAreaCompleted;
         currentArea = safeArea;
     }
@@ -48,10 +45,10 @@ public class EnergyHandler : MonoBehaviour {
         if (StoredWorldEnergy - cellPartEnergy < 0) {
             Debug.Log("Too much energy used on cell parts! Reduce initial amount.");
         }
-        
+
         cellPartHandler.SpawnCellPart(currentArea.initialCellParts);
         UseWorldEnergy(cellPartEnergy);
-        
+
         nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / currentArea.defaultNutrientPartEnergy));
         UseWorldEnergy(StoredWorldEnergy);
         GetNextSpawnType();
