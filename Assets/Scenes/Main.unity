@@ -2743,8 +2743,8 @@ MonoBehaviour:
   scale: 6
   rend: {fileID: 1694993437}
   applyCurrentTimer: 10
-  currentForceLow: -2
-  currentForceHigh: 2
+  currentForceLow: -1
+  currentForceHigh: 1
 --- !u!1001 &666252640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4734,6 +4734,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1787232796152985383, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}
   m_PrefabInstance: {fileID: 244485382}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1497539183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 964306205139660975, guid: 05c4a75e2861fea2a8a252f527288971, type: 3}
+  m_PrefabInstance: {fileID: 8323977437177302131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &1497539187
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497539183}
+  m_Enabled: 1
 --- !u!4 &1516829641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3957713612904420544, guid: 5fb14dc2968d3dc41a65e277a5efa6c2, type: 3}
@@ -4967,7 +4980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4330e255c9cb6da4aa9bd8058204dc80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  audioSource: {fileID: 0}
+  ambientClip: {fileID: 8300000, guid: ca7b6092cd50f654d921b614e0f8ac4e, type: 3}
 --- !u!4 &1660822077
 Transform:
   m_ObjectHideFlags: 0
@@ -6536,7 +6549,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 964306205139660975, guid: 05c4a75e2861fea2a8a252f527288971, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1497539187}
   m_SourcePrefab: {fileID: 100100000, guid: 05c4a75e2861fea2a8a252f527288971, type: 3}
 --- !u!1001 &8352421467878692887
 PrefabInstance:

@@ -24,6 +24,7 @@ public class WorldCurrent : MonoBehaviour {
         noiseTex = new Texture2D(pixWidth, pixHeight);
         pix = new Color[noiseTex.width * noiseTex.height];
         rend.material.mainTexture = noiseTex;
+        CalcNoise();
         StartCoroutine(ApplyCurrent());
     }
 
