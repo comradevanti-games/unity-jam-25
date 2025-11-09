@@ -68,6 +68,12 @@ public class CellPart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // We only initiate docking, if we are a dock and are part of a cell
+        if (!IsDock) return;
+
+        var selfCell = CellQ.CellOf(this);
+        if (selfCell == null) return;
+        
         // Check if we collided with a cell
         var otherPart = CellQ.TryAsCellPart(other.gameObject);
         if (otherPart == null) return;
@@ -75,11 +81,6 @@ public class CellPart : MonoBehaviour
         // If the other part is already part of some larger structure then
         // we can't dock with it.
         if (otherPart.IsDocked) return;
-
-        // If this part is not part of a cell then it should not dock with
-        // other parts
-        var selfCell = CellQ.CellOf(this);
-        if (selfCell == null) return;
 
         var incident = new DockingIncident(selfCell, this, otherPart);
         cellDockingManager.ReportDockingIncident(incident);

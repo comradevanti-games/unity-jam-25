@@ -750,6 +750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Main::CellPartHandler
   availableCellParts:
   - {fileID: 3379663357691933048, guid: 84d1288d7e4307542bebe7df23eb0525, type: 3}
+  - {fileID: 6418255394500476644, guid: 611239eab8984a37095b4f50fa1e57e5, type: 3}
 --- !u!114 &205352724
 MonoBehaviour:
   m_ObjectHideFlags: 0
