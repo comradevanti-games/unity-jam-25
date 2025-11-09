@@ -5,7 +5,7 @@ using Random = System.Random;
 
 public class World : MonoBehaviour {
 
-    public event Action SafeAreaCompleted;
+    public event Action? SafeAreaCompleted;
 
     [SerializeField] private GameObject safeAreaBlockGameObject = null;
     [SerializeField] private Transform areaContainer = null;

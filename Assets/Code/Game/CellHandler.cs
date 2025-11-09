@@ -9,31 +9,37 @@ public class CellHandler : MonoBehaviour {
 
     public List<Cell> LivingCells = new List<Cell>();
 
+    public Cell PlayerCell { get; private set; } = null;
+
     public void OnCellDeath(Cell dyingCell) {
 
         if (CellQ.IsPlayerCell(dyingCell)) {
             LivingCells.Remove(dyingCell);
-            Transform? t = SpawnCell(playerCell, new Vector3(0, 1, 0));
-            Camera.main!.GetComponent<CameraFollow>().SetFollowTarget(t!);
+            SpawnPlayerCell(new Vector3(-60, 1, -55));
         }
 
         LivingCells.Remove(dyingCell);
 
     }
 
-    public Transform? SpawnCell(GameObject cellToSpawn, Vector3 position) {
+    public void SpawnPlayerCell(Vector3 position) {
+        Cell? cell = SpawnCell(playerCell, position);
+        Camera.main!.GetComponent<CameraFollow>().SetFollowTarget(cell!.Root.transform);
+        PlayerCell = cell;
+    }
+
+    public void OnCellPartAttached() { }
+
+    public Cell? SpawnCell(GameObject cellToSpawn, Vector3 position) {
 
         GameObject cellGameObject = Instantiate(cellToSpawn, position, Quaternion.identity);
         Cell? cell = UnzipCell(cellGameObject);
 
-        if (cell != null) {
-            cell.Root.gameObject.GetComponent<CellEnergyStore>().died.AddListener(OnCellDeath);
-            LivingCells.Add(cell);
+        if (cell == null) return null;
 
-            return cell.Root.gameObject.transform;
-        }
-
-        return null;
+        cell.Root.gameObject.GetComponent<CellEnergyStore>().died.AddListener(OnCellDeath);
+        LivingCells.Add(cell);
+        return cell;
 
     }
 
@@ -46,7 +52,6 @@ public class CellHandler : MonoBehaviour {
         cellPrefab.transform.DetachChildren();
 
         Destroy(cellPrefab);
-
         return c;
 
     }
