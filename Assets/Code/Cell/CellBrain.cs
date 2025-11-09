@@ -13,11 +13,13 @@ public class CellBrain : MonoBehaviour
 
     public void ApplyMovement(Vector3 direction)
     {
+        if (direction == Vector3.zero) return;
         foreach (var motor in Motors) motor.MoveIn(direction);
     }
 
     public void ApplyTurn(float direction)
     {
+        if (direction == 0) return;
         foreach (var motor in Motors) motor.TurnIn(direction);
     }
 
