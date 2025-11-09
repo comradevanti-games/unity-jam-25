@@ -51,6 +51,10 @@ public class Nutrient : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
+        // Only cell-parts which are part of a cell can consume nutrients
+        if (other.GetComponentInParent<CellPart>() is not { } part) return;
+        if (!CellQ.IsPartOfCell(part)) return;
+        
         Consumed?.Invoke(this);
     }
 

@@ -10,7 +10,7 @@ public class NutrientCollector : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Nutrient>() is not
             { } nutrient) return;
-
+        
         var energyStore = CellQ.GetRootComponent<CellEnergyStore>(part);
         energyStore?.Gain(nutrient.energy);
     }

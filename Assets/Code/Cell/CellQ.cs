@@ -47,6 +47,9 @@ public static class CellQ
         return CellOf(part);
     }
 
+    public static bool IsPartOfCell(CellPart part) =>
+        CellOf(part) != null;
+
     public static T? GetRootComponent<T>(CellPart part) where T : Component
     {
         var cell = CellOf(part);
