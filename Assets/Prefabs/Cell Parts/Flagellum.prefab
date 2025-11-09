@@ -97,7 +97,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isDock: 0
-  energyContent: 0
+  energyContent: 15
 --- !u!114 &7773828103487594645
 MonoBehaviour:
   m_ObjectHideFlags: 0
