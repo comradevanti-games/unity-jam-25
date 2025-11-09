@@ -14,6 +14,8 @@ public class CellEnergyStore : MonoBehaviour {
     private float energy;
     private Color fullEnergyColor;
 
+
+    private float FullEnergy => initialEnergy * 2;
     
     public float Energy
     {
@@ -23,7 +25,7 @@ public class CellEnergyStore : MonoBehaviour {
             if (Mathf.Approximately(value, energy)) return;
             energy = value;
 
-            var energyT = Mathf.InverseLerp(0, initialEnergy, energy);
+            var energyT = Mathf.InverseLerp(0, FullEnergy, energy);
             var color = Color.Lerp(Color.black, fullEnergyColor, energyT);
             brainRenderer.material.SetColor(baseColor, color);
 
