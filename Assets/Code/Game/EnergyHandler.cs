@@ -51,13 +51,11 @@ public class EnergyHandler : MonoBehaviour {
 
         nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / currentArea.defaultNutrientPartEnergy));
         UseWorldEnergy(StoredWorldEnergy);
+
         GetNextSpawnType();
-        Debug.Log(StoredWorldEnergy);
     }
 
     public void OnSafeAreaCompleted() {
-
-        Debug.Log("Resetting World Energy!");
 
         cellPartHandler.ResetAll();
         nutrientHandler.ResetAll();
