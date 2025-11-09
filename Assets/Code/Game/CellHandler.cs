@@ -10,6 +10,8 @@ public class CellHandler : MonoBehaviour {
     [SerializeField] private GameObject playerCell = null;
     [SerializeField] private GameObject[] enemyCellPrefabs = null;
     [SerializeField] int dockedPartsToCompleteSafeArea = 0;
+    [SerializeField] private Vector3 safeAreaRespawn;
+    [SerializeField] private Vector3 mainAreaRespawn;
 
     public List<Cell> LivingCells = new List<Cell>();
 
@@ -25,14 +27,16 @@ public class CellHandler : MonoBehaviour {
 
         if (CellQ.IsPlayerCell(dyingCell)) {
             LivingCells.Remove(dyingCell);
-            SpawnPlayerCell(new Vector3(-60, 1, -55));
+            SpawnPlayerCell();
         }
 
         LivingCells.Remove(dyingCell);
 
     }
 
-    public void SpawnPlayerCell(Vector3 position) {
+    public void SpawnPlayerCell()
+    {
+        var position = safeAreaCompleted ? mainAreaRespawn : safeAreaRespawn;
         Cell? cell = SpawnCell(playerCell, position);
         Camera.main!.GetComponent<CameraFollow>().SetFollowTarget(cell!.Root.transform);
         PlayerCell = cell;

@@ -22,7 +22,7 @@ public class GameHandler : MonoBehaviour {
     }
 
     private void Initialize() {
-        cellHandler.SpawnPlayerCell(new Vector3(-60, 1, -55));
+        cellHandler.SpawnPlayerCell();
         energyHandler.InitializeWorldEnergy();
         GameInitialized?.Invoke(true);
     }
