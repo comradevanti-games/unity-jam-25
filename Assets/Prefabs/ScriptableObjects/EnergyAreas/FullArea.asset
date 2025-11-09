@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085f04bb47102644095d4abf22ffd286, type: 3}
   m_Name: FullArea
   m_EditorClassIdentifier: Main::EnergyAreaSo
-  maxEnergyAmount: 2000
+  maxEnergyAmount: 3000
   initialCellParts: 20
   defaultCellPartEnergy: 15
   defaultNutrientPartEnergy: 6
