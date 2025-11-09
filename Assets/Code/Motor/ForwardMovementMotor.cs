@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -10,6 +11,9 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
 
     private CellEnergyStore? energyStore;
     private new Rigidbody rigidbody = null!;
+    private Animator animator = null!;
+
+    private bool isMoving;
 
     public void MoveIn(Vector3 direction)
     {
@@ -21,6 +25,8 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
 
         var burnedEnergy = force * energyBurnRate * Time.fixedDeltaTime;
         energyStore?.Burn(burnedEnergy);
+
+        isMoving = true;
     }
 
     public void TurnIn(float direction)
@@ -30,6 +36,13 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
 
         var burnedEnergy = turnForce * Time.fixedDeltaTime;
         energyStore?.Burn(burnedEnergy);
+
+        isMoving = true;
+    }
+
+    private void Update()
+    {
+        animator.speed = isMoving ? 1 : 0.1f;
     }
 
     private void OnDockChanged(CellPart? dock)
@@ -46,9 +59,15 @@ public class ForwardMovementMotor : MonoBehaviour, IMotor
         energyStore = cell!.Root.GetComponent<CellEnergyStore>();
     }
 
+    private void LateUpdate()
+    {
+        isMoving = false;
+    }
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
         GetComponent<CellPart>().dockChanged.AddListener(OnDockChanged);
     }
 }
