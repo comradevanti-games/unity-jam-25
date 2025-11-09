@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FullArea
   m_EditorClassIdentifier: Main::EnergyAreaSo
   maxEnergyAmount: 2000
-  initialCellPartPercentage: 0.2
+  initialCellParts: 20
   defaultCellPartEnergy: 15
   defaultNutrientPartEnergy: 2
   cellPartAppearChance: 0.2

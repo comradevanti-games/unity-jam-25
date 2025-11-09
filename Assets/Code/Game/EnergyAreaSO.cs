@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnergyAreaSo : ScriptableObject {
 
     public float maxEnergyAmount;
-    public float initialCellPartPercentage;
+    public int initialCellParts;
     public float defaultCellPartEnergy;
     public float defaultNutrientPartEnergy;
     public float cellPartAppearChance;
