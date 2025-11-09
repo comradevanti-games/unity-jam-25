@@ -3,14 +3,30 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class CellEnergyStore : MonoBehaviour {
+    private static readonly int baseColor = Shader.PropertyToID("_BaseColor");
 
     public UnityEvent<Cell> died = new UnityEvent<Cell>();
 
     [SerializeField] private float initialEnergy;
+    [SerializeField] private Renderer brainRenderer = null!;
 
     private EnergyHandler energyHandler = null!;
+    private float energy;
 
-    public float Energy { get; private set; }
+    public float Energy
+    {
+        get => energy;
+        private set
+        {
+            energy = value;
+
+            var energyT = Mathf.InverseLerp(0, initialEnergy, energy);
+            var color = Color.Lerp(Color.black, Color.white, energyT);
+            brainRenderer.material.SetColor(baseColor, color);
+
+            if (Energy == 0) Die();
+        }
+    }
 
     private void Die() {
         var cell = CellQ.CellOf(gameObject)!;
@@ -27,10 +43,8 @@ public class CellEnergyStore : MonoBehaviour {
     public void Burn(float amount)
     {
         amount = Mathf.Min(Energy, amount);
-        Energy -= amount;
         energyHandler.ReturnEnergy(amount);
-
-        if (Energy == 0) Die();
+        Energy -= amount;
     }
 
     private void Awake() {
