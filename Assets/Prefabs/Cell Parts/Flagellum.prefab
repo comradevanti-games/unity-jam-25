@@ -46,8 +46,8 @@ Rigidbody:
   m_GameObject: {fileID: 3379663357691933048}
   serializedVersion: 5
   m_Mass: 0.2
-  m_LinearDamping: 0.5
-  m_AngularDamping: 0.5
+  m_LinearDamping: 0.9
+  m_AngularDamping: 0.9
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f1fbd28707411fa69cec356c02958e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::ForwardMovementMotor
-  maxMovementForce: 4
-  turnForce: 1
+  maxMovementForce: 8
+  turnForce: 2
   energyBurnRate: 0.1
 --- !u!114 &-2831987997846321969
 MonoBehaviour:
