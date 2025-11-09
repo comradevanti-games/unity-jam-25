@@ -49,9 +49,9 @@ public class CellEnergyStore : MonoBehaviour {
     }
 
     private void Awake() {
+        fullEnergyColor = brainRenderer.material.GetColor(baseColor);
         Energy = initialEnergy;
         energyHandler = FindAnyObjectByType<EnergyHandler>();
-        fullEnergyColor = brainRenderer.material.color;
     }
 
 }
