@@ -22,7 +22,7 @@ public class GameHandler : MonoBehaviour {
     }
 
     private void Initialize() {
-        Transform? playerT = cellHandler.SpawnCell(playerCell, new Vector3(0, 1, 0));
+        Transform? playerT = cellHandler.SpawnCell(playerCell, new Vector3(-60, 1, -55));
         Camera.main!.GetComponent<CameraFollow>().SetFollowTarget(playerT!);
         energyHandler.InitializeWorldEnergy();
         GameInitialized?.Invoke(true);
