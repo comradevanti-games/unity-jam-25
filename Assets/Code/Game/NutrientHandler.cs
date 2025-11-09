@@ -16,12 +16,13 @@ public class NutrientHandler : MonoBehaviour {
 
         World world = FindAnyObjectByType<World>();
 
-        for (int i = 0; i <= amount; i++) {
+        for (int i = 0; i < amount; i++) {
             Nutrient n = Instantiate(smallNutrientPrefab, world.GetRandomWorldPoint(), Quaternion.identity)
                 .GetComponent<Nutrient>();
             n.Consumed += OnNutrientConsumed;
             currentNutrients.Add(n);
         }
+
     }
 
     private void OnNutrientConsumed(Nutrient consumedNutrient) {
@@ -29,6 +30,16 @@ public class NutrientHandler : MonoBehaviour {
         consumedNutrient.Consumed -= OnNutrientConsumed;
         currentNutrients.Remove(consumedNutrient);
         Destroy(consumedNutrient.gameObject);
+    }
+
+    public void ResetAll() {
+
+        foreach (Nutrient n in currentNutrients) {
+            n.Consumed -= OnNutrientConsumed;
+            Destroy(n.gameObject);
+        }
+
+        currentNutrients = new();
     }
 
 }

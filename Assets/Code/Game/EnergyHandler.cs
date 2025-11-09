@@ -49,7 +49,10 @@ public class EnergyHandler : MonoBehaviour {
     }
 
     public void OnSafeAreaCompleted() {
-        Debug.Log("Will reset the world energy!");
+        Debug.Log("Resetting World Energy!");
+
+        cellPartHandler.ResetAll();
+        nutrientHandler.ResetAll();
 
     }
 
@@ -57,9 +60,6 @@ public class EnergyHandler : MonoBehaviour {
 
         if (StoredWorldEnergy - usedEnergy >= 0) {
             StoredWorldEnergy -= usedEnergy;
-        }
-        else {
-            Debug.Log("No Energy available!");
         }
 
     }
@@ -105,7 +105,6 @@ public class EnergyHandler : MonoBehaviour {
 
         if (percentage < cellPartAppearChance) {
             QueuedSpawnType = SpawnType.Cell;
-
             return;
         }
 

@@ -444,6 +444,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (1)
       objectReference: {fileID: 0}
@@ -520,6 +524,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (4)
@@ -1618,6 +1626,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (6)
       objectReference: {fileID: 0}
@@ -1745,6 +1757,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (2)
@@ -2816,6 +2832,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (8)
       objectReference: {fileID: 0}
@@ -3190,6 +3210,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (3)
       objectReference: {fileID: 0}
@@ -3256,6 +3280,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (5)
@@ -3384,6 +3412,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (7)
@@ -3588,6 +3620,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (10)
@@ -3991,6 +4027,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint (9)
@@ -4475,6 +4515,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 905249444}
     m_Modifications:
+    - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6897965762275874227, guid: fcaf2231206f02646a5c644acfaaf76b, type: 3}
       propertyPath: m_Name
       value: AreaPoint
