@@ -13,13 +13,16 @@ public class CellPartHandler : MonoBehaviour {
 
     public int CellPartsAmount => currentCellParts.Count;
 
+    private Quaternion RandomRotation() =>
+        Quaternion.AngleAxis(Random.Range(0, 360f), Vector3.up);
+    
     public void SpawnCellPart(int amount) {
         var world = FindAnyObjectByType<World>();
 
         for (var i = 0; i <= amount; i++) {
             var c = Instantiate(
                 availableCellParts[Random.Range(0, availableCellParts.Length)],
-                world.GetRandomWorldPoint(), Quaternion.identity);
+                world.GetRandomWorldPoint(), RandomRotation());
             currentCellParts.Add(c);
         }
     }
