@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SafeArea
   m_EditorClassIdentifier: Main::EnergyAreaSo
   maxEnergyAmount: 200
-  initialCellPartPercentage: 0.2
+  initialCellParts: 3
   defaultCellPartEnergy: 15
   defaultNutrientPartEnergy: 2
-  cellPartAppearChance: 0.1
+  cellPartAppearChance: 0
   enemyAppearChance: 0

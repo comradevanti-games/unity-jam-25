@@ -28,23 +28,34 @@ public class EnergyHandler : MonoBehaviour {
     private float CurrentWorldEnergy => cellPartHandler.CellPartsAmount * currentArea.defaultCellPartEnergy +
                                         nutrientHandler.NutrientAmount * currentArea.defaultNutrientPartEnergy;
 
+    private Cell PlayerCell { get; set; }
+
     private void Awake() {
         cellPartHandler = FindAnyObjectByType<CellPartHandler>();
         nutrientHandler = FindAnyObjectByType<NutrientHandler>();
         world = FindAnyObjectByType<World>();
+        PlayerCell = FindAnyObjectByType<CellHandler>().PlayerCell;
         world.SafeAreaCompleted += OnSafeAreaCompleted;
         currentArea = safeArea;
     }
 
     public void InitializeWorldEnergy() {
         StoredWorldEnergy = currentArea.maxEnergyAmount;
-        float cellPartEnergy = StoredWorldEnergy * currentArea.initialCellPartPercentage;
-        int cellPartAmount = (int)(cellPartEnergy / currentArea.defaultCellPartEnergy);
-        cellPartHandler.SpawnCellPart(cellPartAmount);
+        float playerEnergy = 90;
+        UseWorldEnergy(playerEnergy);
+        float cellPartEnergy = currentArea.initialCellParts * currentArea.defaultCellPartEnergy;
+
+        if (StoredWorldEnergy - cellPartEnergy < 0) {
+            Debug.Log("Too much energy used on cell parts! Reduce initial amount.");
+        }
+        
+        cellPartHandler.SpawnCellPart(currentArea.initialCellParts);
         UseWorldEnergy(cellPartEnergy);
+        
         nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / currentArea.defaultNutrientPartEnergy));
         UseWorldEnergy(StoredWorldEnergy);
         GetNextSpawnType();
+        Debug.Log(StoredWorldEnergy);
     }
 
     public void OnSafeAreaCompleted() {
@@ -54,17 +65,13 @@ public class EnergyHandler : MonoBehaviour {
         cellPartHandler.ResetAll();
         nutrientHandler.ResetAll();
         currentArea = fullArea;
-        Camera.main!.GetComponent<CameraFollow>().SetCameraDistance(20f);
+        Camera.main!.GetComponent<CameraFollow>().SetCameraDistance(15f);
         InitializeWorldEnergy();
 
     }
 
     private void UseWorldEnergy(float usedEnergy) {
-
-        if (StoredWorldEnergy - usedEnergy >= 0) {
-            StoredWorldEnergy -= usedEnergy;
-        }
-
+        StoredWorldEnergy -= usedEnergy;
     }
 
     public void ReturnEnergy(float amount) {
@@ -74,6 +81,7 @@ public class EnergyHandler : MonoBehaviour {
 
         if (QueuedSpawnType == SpawnType.Nutrient && StoredWorldEnergy >= currentArea.defaultNutrientPartEnergy) {
             ReleaseStoredEnergy(QueuedSpawnType);
+
             return;
         }
 
@@ -108,6 +116,7 @@ public class EnergyHandler : MonoBehaviour {
 
         if (percentage < currentArea.cellPartAppearChance) {
             QueuedSpawnType = SpawnType.Cell;
+
             return;
         }
 
