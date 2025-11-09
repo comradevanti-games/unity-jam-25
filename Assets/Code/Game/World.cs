@@ -47,6 +47,7 @@ public class World : MonoBehaviour {
     public void OnSafeAreaCompleted() {
         Destroy(safeAreaBlockGameObject);
         hasSafeAreaCompleted = true;
+        SetAreaPoints();
         SafeAreaCompleted?.Invoke();
     }
 

@@ -12,47 +12,50 @@ public enum SpawnType {
 
 public class EnergyHandler : MonoBehaviour {
 
-    [SerializeField] private float maxEnergyAmount = 500f;
-    [SerializeField] private float initialCellPartPercentage = 5f;
-    [SerializeField] private float defaultCellPartEnergy = 15f;
-    [SerializeField] private float defaultNutrientPartEnergy = 2f;
-    [SerializeField] private float cellPartAppearChance = 0.2f;
-    [SerializeField] private float enemyAppearChance = 0.1f;
+    [SerializeField] private EnergyAreaSo safeArea = null;
+    [SerializeField] private EnergyAreaSo fullArea = null;
 
     private CellPartHandler cellPartHandler = null;
     private NutrientHandler nutrientHandler = null;
     private World world = null;
 
-    public float StoredWorldEnergy { get; private set; }
+    private EnergyAreaSo currentArea = null;
+
+    private float StoredWorldEnergy { get; set; }
 
     private SpawnType QueuedSpawnType { get; set; }
 
-    private float CurrentWorldEnergy => cellPartHandler.CellPartsAmount * defaultCellPartEnergy +
-                                        nutrientHandler.NutrientAmount * defaultNutrientPartEnergy;
+    private float CurrentWorldEnergy => cellPartHandler.CellPartsAmount * currentArea.defaultCellPartEnergy +
+                                        nutrientHandler.NutrientAmount * currentArea.defaultNutrientPartEnergy;
 
     private void Awake() {
         cellPartHandler = FindAnyObjectByType<CellPartHandler>();
         nutrientHandler = FindAnyObjectByType<NutrientHandler>();
         world = FindAnyObjectByType<World>();
         world.SafeAreaCompleted += OnSafeAreaCompleted;
+        currentArea = safeArea;
     }
 
     public void InitializeWorldEnergy() {
-        StoredWorldEnergy = maxEnergyAmount;
-        float cellPartEnergy = StoredWorldEnergy * initialCellPartPercentage;
-        int cellPartAmount = (int)(cellPartEnergy / defaultCellPartEnergy);
+        StoredWorldEnergy = currentArea.maxEnergyAmount;
+        float cellPartEnergy = StoredWorldEnergy * currentArea.initialCellPartPercentage;
+        int cellPartAmount = (int)(cellPartEnergy / currentArea.defaultCellPartEnergy);
         cellPartHandler.SpawnCellPart(cellPartAmount);
         UseWorldEnergy(cellPartEnergy);
-        nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / defaultNutrientPartEnergy));
+        nutrientHandler.SpawnNutrient((int)(StoredWorldEnergy / currentArea.defaultNutrientPartEnergy));
         UseWorldEnergy(StoredWorldEnergy);
         GetNextSpawnType();
     }
 
     public void OnSafeAreaCompleted() {
+
         Debug.Log("Resetting World Energy!");
 
         cellPartHandler.ResetAll();
         nutrientHandler.ResetAll();
+        currentArea = fullArea;
+        Camera.main!.GetComponent<CameraFollow>().SetCameraDistance(20f);
+        InitializeWorldEnergy();
 
     }
 
@@ -67,14 +70,14 @@ public class EnergyHandler : MonoBehaviour {
     public void ReturnEnergy(float amount) {
         StoredWorldEnergy += amount;
 
-        if (CurrentWorldEnergy >= maxEnergyAmount) return;
+        if (CurrentWorldEnergy >= currentArea.maxEnergyAmount) return;
 
-        if (QueuedSpawnType == SpawnType.Nutrient && StoredWorldEnergy >= defaultNutrientPartEnergy) {
+        if (QueuedSpawnType == SpawnType.Nutrient && StoredWorldEnergy >= currentArea.defaultNutrientPartEnergy) {
             ReleaseStoredEnergy(QueuedSpawnType);
             return;
         }
 
-        if (QueuedSpawnType == SpawnType.Cell && StoredWorldEnergy >= defaultCellPartEnergy) {
+        if (QueuedSpawnType == SpawnType.Cell && StoredWorldEnergy >= currentArea.defaultCellPartEnergy) {
             ReleaseStoredEnergy(QueuedSpawnType);
         }
 
@@ -84,7 +87,7 @@ public class EnergyHandler : MonoBehaviour {
 
         if (toSpawn == SpawnType.Nutrient) {
             nutrientHandler.SpawnNutrient(1);
-            UseWorldEnergy(defaultCellPartEnergy);
+            UseWorldEnergy(currentArea.defaultCellPartEnergy);
         }
 
         if (toSpawn == SpawnType.Cell) {
@@ -99,11 +102,11 @@ public class EnergyHandler : MonoBehaviour {
 
         float percentage = Random.Range(0f, 1f);
 
-        if (percentage < enemyAppearChance) {
+        if (percentage < currentArea.enemyAppearChance) {
             //TODO: Spawn Enemy
         }
 
-        if (percentage < cellPartAppearChance) {
+        if (percentage < currentArea.cellPartAppearChance) {
             QueuedSpawnType = SpawnType.Cell;
             return;
         }

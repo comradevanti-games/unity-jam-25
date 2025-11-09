@@ -18,6 +18,10 @@ public class CameraFollow : MonoBehaviour {
 
     public void SetFollowTarget(Transform target) => followTransform = target;
 
+    public void SetCameraDistance(float newDistance) {
+        yDistance = newDistance;
+    }
+
     private void LateUpdate() {
 
         if (!followTransform) {

@@ -923,12 +923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886e19576cd3aa340bbedddd503355c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Main::EnergyHandler
-  maxEnergyAmount: 200
-  initialCellPartPercentage: 0.2
-  defaultCellPartEnergy: 15
-  defaultNutrientPartEnergy: 2
-  cellPartAppearChance: 0.2
-  enemyAppearChance: 0
+  safeArea: {fileID: 11400000, guid: ef634cf160d35654d8e298b365a0d574, type: 2}
+  fullArea: {fileID: 11400000, guid: dd2cebcda3758a94787953de8bd32736, type: 2}
 --- !u!114 &205352725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,7 +939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Main::CellHandler
   playerCell: {fileID: 8190447219151489572, guid: af2590d5e412da049a8151228f4ab019, type: 3}
   enemyCellPrefabs: []
-  dockedPartsToCompleteSafeArea: 4
+  dockedPartsToCompleteSafeArea: 3
 --- !u!4 &226156008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1787232796152985383, guid: 094ec35beef3a53479cf369ff762c33e, type: 3}

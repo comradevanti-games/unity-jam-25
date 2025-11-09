@@ -13,6 +13,8 @@ public class CellHandler : MonoBehaviour {
 
     public List<Cell> LivingCells = new List<Cell>();
 
+    private bool safeAreaCompleted = false;
+
     public Cell PlayerCell { get; private set; } = null;
 
     private void Awake() {
@@ -40,15 +42,14 @@ public class CellHandler : MonoBehaviour {
 
         Cell cell = CellQ.CellOf(part!)!;
 
-        if (CellQ.IsPlayerCell(cell)) {
+        if (!CellQ.IsPlayerCell(cell)) return;
 
-            int amount = CellQ.IterAllPartsIn(cell).Count();
+        int amount = CellQ.IterAllPartsIn(cell).Count();
 
-            if (amount >= dockedPartsToCompleteSafeArea) {
-                SafeAreaCompleted?.Invoke();
-            }
+        if (safeAreaCompleted || amount < dockedPartsToCompleteSafeArea) return;
 
-        }
+        SafeAreaCompleted?.Invoke();
+        safeAreaCompleted = true;
 
     }
 
