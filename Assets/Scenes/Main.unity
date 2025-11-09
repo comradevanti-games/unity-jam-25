@@ -1073,7 +1073,7 @@ MonoBehaviour:
   playerCell: {fileID: 8190447219151489572, guid: af2590d5e412da049a8151228f4ab019, type: 3}
   enemyCellPrefabs:
   - {fileID: 5943109564316381463, guid: 26f23a11d19c6b8708ed883f877b6e0c, type: 3}
-  dockedPartsToCompleteSafeArea: 3
+  dockedPartsToCompleteSafeArea: 4
   safeAreaRespawn: {x: -60, y: 1, z: -55}
   mainAreaRespawn: {x: 10, y: 1, z: 10}
 --- !u!4 &226156008 stripped
